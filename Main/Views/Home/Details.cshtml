@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Подробности</title>
+</head>
+<body>
+    <div> 
+        <h3 style="font-size: 20px; margin-bottom:0px;">@ViewBag.Pokemon.Name :</h3>
+        <table style="margin-top: 0px;">
+            <tr>
+                <td><p>Номер</p></td>
+                <td><p>Урон</p></td>
+                <td><p>Здоровье</p></td>
+                <td><p>Способность</p></td>
+                <td><p>Инфо о способности</p></td>
+                <td><p>Кулдаун</p></td>
+                <td><p>Коронная фраза</p></td>
+            </tr>
+            <tr>
+                <td><p>@ViewBag.Pokemon.Id</p></td>
+                <td><p>@ViewBag.Pokemon.Damage</p></td>
+                <td><p>@ViewBag.Pokemon.Health</p></td>
+                <td><p>@ViewBag.Pokemon.SpellName</p></td>
+                <td><p>@ViewBag.Pokemon.SpellDetails</p></td>
+                <td><p>@ViewBag.Pokemon.SpellColdown</p></td>
+                <td><p>@ViewBag.Pokemon.BestPhrase</p></td>
+             </tr>
+        </table>
+    </div>
+</body>
+</html>

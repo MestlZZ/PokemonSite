@@ -1,0 +1,52 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Добавление</title>
+</head>
+<body>
+    <div>
+        <h3>Форма добавления покемонов</h3>
+        <form method="post">
+            <input type="hidden" value="@ViewBag.PokemonId" name="PokemonId" />
+            <table>
+                <tr>
+                    <td><p>Введите имя покемона</p></td>
+                    <td><input type="text" name="Name" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Введите урон</p></td>
+                    <td><input type="text" name="Damage" /></td>
+                </tr>
+                <tr>
+                    <td><p>Введите здоровье</p></td>
+                    <td><input type="text" name="Health" /></td>
+                </tr>
+                <tr>
+                    <td><p>Введите имя способности</p></td>
+                    <td><input type="text" name="SpellName" /></td>
+                </tr>
+                <tr>
+                    <td><p>Введите описание способности</p></td>
+                    <td><input type="text" name="SpellDetails" /></td>
+                </tr>
+                <tr>
+                    <td><p>Введите кулдаун способности</p></td>
+                    <td><input type="text" name="SpellColdown" /></td>
+                </tr>
+                <tr>
+                    <td><p>Введите коронную фразу покемона</p></td>
+                    <td><input type="text" name="BestPhrase" /></td>
+                </tr>
+                <tr><td><input type="submit" value="Добавить" /> </td><td></td></tr>
+            </table>
+        </form> 
+    </div>
+</body>
+</html>

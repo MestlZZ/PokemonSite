@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Список покемонов</title>
+</head>
+<body>
+    <div> 
+        <h3>Список покемонов Нерзула:</h3>
+        <table>
+            <tr>
+                <td><p>Номер</p></td>
+                <td><p>Имя покемона</p></td>
+                <td><p>Здоровье</p></td>
+                <td><p>Способность</p></td>
+                <td><p>Коронная фраза</p></td>
+                <td></td>
+            </tr>
+            @foreach (var b in ViewBag.Pokemons)
+            {
+                <tr>
+                    <td><p>@b.Id</p></td>
+                    <td><p><a href="/Home/Details/@b.Id">@b.Name</a></p></td>
+                    <td><p>@b.Health</p></td>
+                    <td><p>@b.SpellName</p></td>
+                    <td><p>@b.BestPhrase</p></td>
+                    <td><p><a id="editBut" href="/Home/Edit/@b.Id">Edit</a></p></td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

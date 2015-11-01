@@ -1,0 +1,59 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <div>
+        <h3>Форма редактировния покемонов</h3>
+        <form method="post">
+            <input type="hidden" value="@ViewBag.PokemonId" name="PokemonId" />
+            <table>
+                <tr>
+                    <td><p>Введите имя покемона</p></td>
+                    <td><input type="text" name="Name" /></td>
+                    <td><p>@ViewBag.Pokemon.Name</p></td>
+                </tr>
+                <tr>
+                    <td><p>Введите урон</p></td>
+                    <td><input type="text" name="Damage" /></td>
+                    <td><p>@ViewBag.Pokemon.Damage</p></td>
+                </tr>
+                <tr>
+                    <td><p>Введите здоровье</p></td>
+                    <td><input type="text" name="Health" /></td>
+                    <td><p>@ViewBag.Pokemon.Health</p></td>
+                </tr>
+                <tr>
+                    <td><p>Введите имя способности</p></td>
+                    <td><input type="text" name="SpellName" /></td>
+                    <td><p>@ViewBag.Pokemon.SpellName</p></td>
+                </tr>
+                <tr>
+                    <td><p>Введите описание способности</p></td>
+                    <td><input type="text" name="SpellDetails" /></td>
+                    <td><p>@ViewBag.Pokemon.SpellDetails</p></td>
+                </tr>
+                <tr>
+                    <td><p>Введите кулдаун способности</p></td>
+                    <td><input type="text" name="SpellColdown" /></td>
+                    <td><p>@ViewBag.Pokemon.SpellColdown</p></td>
+                </tr>
+                <tr>
+                    <td><p>Введите коронную фразу покемона</p></td>
+                    <td><input type="text" name="BestPhrase" /></td>
+                    <td><p>@ViewBag.Pokemon.BestPhrase</p></td>
+                </tr>
+                <tr><td><input type="submit" value="Сохранить" /> </td><td></td></tr>
+            </table>
+        </form>  
+    </div>
+</body>
+</html>
